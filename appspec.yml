@@ -6,14 +6,14 @@ files:
   - source: appspec.yml
     destination: /home/ec2-user
  hooks:
-  BeforeInstall:
-  - location: scripts/install_dependencies
-      timeout: 300
-      runas: ec2-user
-  - location: scripts/start_server
-      timeout: 300
-      runas: ec2-user
-  ApplicationStop:
-  - location: scripts/stop_server
-      timeout: 300
-      runas: ec2-user
+   BeforeInstall:
+     - location: scripts/install_dependencies
+       timeout: 300
+       runas: ec2-user
+     - location: scripts/start_server
+       timeout: 300
+       runas: ec2-user
+   ApplicationStop:
+     - location: scripts/stop_server
+       timeout: 300
+       runas: ec2-user
