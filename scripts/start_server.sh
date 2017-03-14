@@ -1,1 +1,2 @@
-service httpd start
+#!/bin/sh
+sudo service httpd start
