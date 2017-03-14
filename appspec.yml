@@ -4,6 +4,10 @@ files:
   - source: index.php
     destination: /var/www/html/
 hooks:
-   Applicationstart:
-     - location: scripts/start_server.sh
+  Applicationstart:
+    - location: scripts/start_server.sh
        runas: ec2-user
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 300
+      runas: root
