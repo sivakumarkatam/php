@@ -4,10 +4,10 @@ files:
   - source: index.php
     destination: /var/www/html/
 hooks:
-  Applicationstart:
-    - location: scripts/start_server.sh
-      runas: root
   ApplicationStop:
     - location: scripts/stop_server
       timeout: 300
+      runas: root
+  Applicationstart:
+    - location: scripts/start_server.sh
       runas: root
