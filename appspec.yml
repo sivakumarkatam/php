@@ -3,9 +3,7 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/
-  - source: appspec.yml
-   destination: /home/ec2-user
-hooks:
+ hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
       timeout: 300
