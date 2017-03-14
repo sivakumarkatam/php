@@ -3,9 +3,7 @@ os: linux
 files:
   - source: index.php
     destination: /var/www/html/
-  - source: appspec.yml
-    destination: /home/ec2-user
- hooks:
+hooks:
    ApplicationStop:
      - location: scripts/stop_server.sh
        timeout: 300
