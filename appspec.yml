@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /index.php
     destination: /var/www/html/
+  - source: /logout.php
+    destination: /var/www/html/
 hooks:
   Applicationstart:
     - location: scripts/start_server.sh
