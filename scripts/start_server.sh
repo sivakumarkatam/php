@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo service httpd start
+sudo systemctl start apache2.service
