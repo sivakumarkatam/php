@@ -1,3 +1,3 @@
 # php project
-new commit
+new commit added
 added mail on git
