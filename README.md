@@ -1,5 +1,5 @@
 # php project
 new commit
 newly branch created
-get mail
+get mail removed
 updated mail
