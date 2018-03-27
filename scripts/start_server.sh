@@ -2,7 +2,7 @@
 #sudo systemctl start apache2.service
 if [ "$DEPLOYMENT_GROUP_NAME" == "unicorn-dev-cron" ]
 then
-document_root=/var/www/devcron/magento2
+document_root=/var/www/devcron/magento
 pwd
 cd $document_root
 echo "current directory"
