@@ -6,8 +6,6 @@ files:
 hooks:
   AfterInstall:
     - location: scripts/service_server.sh
-      runas: root
-  Applicationstart:
     - location: scripts/start_server.sh
       runas: root
   ApplicationStop:
