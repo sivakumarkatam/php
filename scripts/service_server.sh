@@ -4,17 +4,17 @@ deployment_root=/opt/deployment
 
 if [ "$DEPLOYMENT_GROUP_NAME" == "unicorn-dev-cron" ]
 then
-    document_root=/var/www/devcron/magento    
+          document_root=/var/www/devcron/magento    
 	  sudo cp -f -r $deployment_root/* /var/tmp/
 	  sudo cd $document_root
 	  sudo php bin/magento maintenance:enable
-    sudo rm -rf $document_root/*
-    sudo mkdir -p $document_root
+          sudo rm -rf $document_root/*
+          sudo mkdir -p $document_root
 	  sudo cd $document_root
-	  sudo php bin/magento maintenance:enable
-    sudo cp -f -r $deployment_root/* $document_root/
-    sudo mkdir -p /run/php/
-    sudo chown -R nginx:nginx /run/php/
+	  #sudo php bin/magento maintenance:enable
+          sudo cp -f -r $deployment_root/* $document_root/
+          sudo mkdir -p /run/php/
+          sudo chown -R nginx:nginx /run/php/
   elif [ "$DEPLOYMENT_GROUP_NAME" == "unicorn-stg-cron" ]
 then
 	document_root=/var/www/stgcron/magento	
