@@ -1,7 +1,9 @@
 #!/bin/bash
 #sudo systemctl start apache2.service
+echo $DEPLOYMENT_GROUP_NAME
 if [ "$DEPLOYMENT_GROUP_NAME" == "unicorn-dev-cron" ]
 then
+echo $DEPLOYMENT_GROUP_NAME
 document_root=/var/www/devcron/magento
 pwd
 cd $document_root
