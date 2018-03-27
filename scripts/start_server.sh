@@ -30,6 +30,7 @@ php bin/magento setup:static-content:deploy -f
 sudo chmod 700 $document_root/app/etc
 sudo chown -R nginx:nginx $document_root
 else 
+   echo "executing else stratement in start service file"
 	exit 1
 
 fi
