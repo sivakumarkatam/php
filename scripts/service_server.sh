@@ -4,7 +4,8 @@ deployment_root=/opt/deployment
 
 if [ "$DEPLOYMENT_GROUP_NAME" == "unicorn-dev-cron" ]
 then
-          document_root=/var/www/devcron/magento    
+          echo $DEPLOYMENT_GROUP_NAME
+	  document_root=/var/www/devcron/magento    
 	  sudo cp -f -r $deployment_root/* /var/tmp/
 	  sudo cd $document_root
 	  sudo php bin/magento maintenance:enable
