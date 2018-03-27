@@ -1,10 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.php
-    destination: /var/www/html/
-  - source: /logout.php
-    destination: /var/www/html/
+  - source: /
+    destination: /opt/deployment/
 hooks:
   AfterInstall:
     - location: scripts/service_server.sh
