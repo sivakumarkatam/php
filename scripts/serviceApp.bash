@@ -33,6 +33,17 @@ then
 
 
 else 
+       echo "started service app file in else condition"
+	sudo cp -f -r $deployment_root/* /var/tmp/
+	sudo rm -rf $document_root_cron_dev/*
+	sudo mkdir -p $document_root_cron_dev
+	sudo cp -f -r $deployment_root/* $document_root_cron_dev/
+	sudo mkdir -p /run/php/
+	sudo chown -R nginx:nginx /run/php/
+	sudo systemctl start php-fpm
+	sudo systemctl enable php-fpm
+	sudo cp -f $deployment_root/scripts/DevEnv/env.php $document_root_cron_dev/app/etc/
+echo "completed service app file in else condition"
 	exit 1
 
 fi
