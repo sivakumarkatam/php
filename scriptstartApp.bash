@@ -8,6 +8,7 @@ then
 echo "started execution of start script in start app file"
 sudo semanage port -m -t http_port_t -p tcp 587
 cd $document_root_cron_dev
+pwd
 composer update
 php bin/magento deploy:mode:set developer
 php bin/magento setup:upgrade
@@ -44,6 +45,7 @@ echo "completed execution of start script in start app file"
 
 else
 
+echo "started execution of start script in else condition "
 sudo semanage port -m -t http_port_t -p tcp 587
 cd $document_root
 composer update
@@ -80,5 +82,7 @@ sudo rm -rf generated/code
 sudo rm -rf generated/metadata
 #php "$document_root/bin/magento" setup:upgrade
 sudo chmod 777 -R "$document_root/generated"
+
+echo "completed execution of start script in else condition "
 
 fi
