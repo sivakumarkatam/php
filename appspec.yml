@@ -5,10 +5,17 @@ files:
     destination: /opt/deployment/
 hooks:
   AfterInstall:
-    - location: scripts/service_server.sh
-    - location: scripts/start_server.sh
+    - location: scripts/serviceApp.bash
+      runas: root
+  ApplicationStart:
+    - location: scripts/startApp.bash
+      runas: root
+ ApplicationAfterStart:
+    - location: scripts/afterstartApp.bash
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server.sh
-      timeout: 300
+    - location: scripts/stopApp.bash
+      runas: root
+  ValidateService:
+    - location: scripts/verifyApp.bash
       runas: root
